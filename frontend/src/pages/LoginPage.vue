@@ -1,8 +1,9 @@
 <template>
   <q-page class="flex flex-center">
     <div class="login-container">
+      <div class="title">Tech Connect</div>
       <img
-        alt="Quasar logo"
+        alt="Tech Connect logo"
         src="~assets/tech-logo.jpg"
         style="width: 300px; height: 300px"
       />
@@ -14,7 +15,10 @@
         label="Login"
         @click="login()"
       />
-      <q-btn class="login-buttons" color="negative" label="Reset Password" />
+      <q-btn
+        class="login-buttons" 
+        color="negative"
+        label="Reset Password" />
     </div>
   </q-page>
 </template>
@@ -36,6 +40,12 @@ export default defineComponent({
 </script>
 
 <style>
+.title {
+  font-size: 70px;
+  font-weight: 600;
+  color: darkslategray;
+  text-align: center;
+}
 .login-container {
   width: 300px;
 }
