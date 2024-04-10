@@ -3,7 +3,7 @@
     <div class="login-container">
       <div class="title">Tech Connect</div>
       <img
-        alt="Quasar logo"
+        alt="Tech Connect logo"
         src="~assets/tech-logo.jpg"
         style="width: 300px; height: 300px"
       />
@@ -15,7 +15,7 @@
         label="Login"
         @click="login()"
       />
-      <q-btn 
+      <q-btn
         class="login-buttons" 
         color="negative"
         label="Reset Password" />
