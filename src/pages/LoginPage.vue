@@ -1,8 +1,16 @@
 <template>
   <q-page class="flex flex-center">
-    <q-input filled label="Username" />
-    <q-input filled label="Password" />
-    <q-btn color="primary" label="Login" />
+    <div class="login-container">
+      <img
+        alt="Quasar logo"
+        src="~assets/tech-logo.jpg"
+        style="width: 300px; height: 300px"
+      />
+      <q-input filled class="login-input" label="Username" />
+      <q-input filled class="login-input" label="Password" />
+      <q-btn class="login-buttons" color="primary" label="Login" />
+      <q-btn class="login-buttons" color="negative" label="Reset Password" />
+    </div>
   </q-page>
 </template>
 
@@ -13,3 +21,17 @@ export default defineComponent({
   name: "IndexPage",
 });
 </script>
+
+<style>
+.login-container {
+  width: 300px;
+}
+.login-input {
+  width: 100%;
+  margin: 10px;
+}
+.login-buttons {
+  width: 100%;
+  margin: 10px 10px 0 10px;
+}
+</style>
