@@ -1,7 +1,8 @@
-import app from "../app";
-
+import app from "../app.js";
+import bcrypt from "bcrypt";
+import UsersDB from "../Schemas/user-schema.js";
 //User logging in
-app.get("/user/login", async (req, res) => {
+app.get("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -38,7 +39,7 @@ app.get("/user/login", async (req, res) => {
 });
 
 //User is registering
-app.post("/user/register", async (req, res) => {
+app.post("/register", async (req, res) => {
   const { firstName, lastName, email, password, confirmPassword } = req.body;
 
   try {
