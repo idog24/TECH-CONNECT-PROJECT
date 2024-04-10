@@ -38,7 +38,7 @@ app.get("/user/login", async (req, res) => {
 });
 
 //User is registering
-app.post("/register", async (req, res) => {
+app.post("/user/register", async (req, res) => {
   const { firstName, lastName, email, password, confirmPassword } = req.body;
 
   try {
