@@ -8,7 +8,12 @@
       />
       <q-input filled class="login-input" label="Username" />
       <q-input filled class="login-input" label="Password" />
-      <q-btn class="login-buttons" color="primary" label="Login" />
+      <q-btn
+        class="login-buttons"
+        color="primary"
+        label="Login"
+        @click="login()"
+      />
       <q-btn class="login-buttons" color="negative" label="Reset Password" />
     </div>
   </q-page>
@@ -19,6 +24,14 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "IndexPage",
+  data: function () {
+    return {};
+  },
+  methods: {
+    login: function () {
+      this.$router.push({ name: "home" });
+    },
+  },
 });
 </script>
 
