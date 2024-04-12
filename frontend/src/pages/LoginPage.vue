@@ -7,8 +7,8 @@
         src="~assets/tech-logo.jpg"
         style="width: 300px; height: 300px"
       />
-      <q-input filled class="login-input" label="Username" />
-      <q-input filled class="login-input" label="Password" />
+      <q-input v-model="username" filled class="login-input" label="Username" />
+      <q-input v-model="password" filled class="login-input" label="Password" />
       <q-btn
         class="login-buttons"
         color="primary"
@@ -29,10 +29,14 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "IndexPage",
   data: function () {
-    return {};
+    return {
+      username: '',
+      password: '',
+    };
   },
   methods: {
     login: function () {
+      // must send username and password to back-end login logic
       this.$router.push({ name: "home" });
     },
   },
