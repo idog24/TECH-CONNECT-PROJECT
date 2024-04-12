@@ -13,6 +13,11 @@ const routes = [
         path: "home",
         component: () => import("pages/IndexPage.vue"),
       },
+      {
+        name: "search",
+        path: "search",
+        component: () => import("pages/SearchPage.vue"),
+      },
     ],
   },
 
